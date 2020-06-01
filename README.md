@@ -1,5 +1,7 @@
-# Example Package
+# pybomberman
 
-This is a simple example package. You can use
-[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-to write your content.
+Bomberman game and framework implementation in python
+
+https://github.com/pybomberman/pybomberman
+
+https://pypi.org/project/pybomberman/

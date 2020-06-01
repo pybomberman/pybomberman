@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pybomberman", # Replace with your own username
-    version="0.0.1",
-    author="Example Author",
+    version="0.0.2",
+    author="pybomberman Staff",
     author_email="author@example.com",
-    description="A small example package",
+    description="Bomberman game and framework implementation in python",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/pybomberman/pybomberman",
