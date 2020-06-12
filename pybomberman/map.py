@@ -4,7 +4,7 @@ BLOCK_OPEN = 0
 BLOCK_DESTRUCTIBLE = 1
 BLOCK_WALL = 2
 
-BLOCK_REPR = (' ', '*', 'x')
+BLOCK_REPR = ('-', '*', 'x')
 
 MIN_X_SIZE = 3
 MAX_X_SIZE = 90
@@ -29,22 +29,28 @@ class Map:
     def check_map_size(self, x, y):
 
         if not x % 3 == 0:
-            raise MapError('Map width should be an integer number multiple of 3')
+            raise MapError('Map width should be an integer number multiple of'
+                           '3')
 
         elif not x >= MIN_X_SIZE:
-            raise MapError('Map width should be an integer number equal or greater than 3')
+            raise MapError('Map width should be an integer number equal or'
+                           'greater than {}'.format(MIN_X_SIZE))
 
         elif not x <= MAX_X_SIZE:
-            raise MapError('Map width should be an integer number lesses or equal to ')
+            raise MapError('Map width should be an integer number lesses or'
+                           'equal to {}'.format(MAX_X_SIZE))
 
         elif not y % 3 == 0:
-            raise MapError('Map height should be an integer number multiple of 3')
+            raise MapError('Map height should be an integer number multiple of'
+                           '3')
 
         elif not y >= MIN_Y_SIZE:
-            raise MapError('Map height should be an integer number equal or greater than 3')
+            raise MapError('Map height should be an integer number equal or'
+                           'greater than {}'.format(MIN_X_SIZE))
 
         elif not y <= MAX_Y_SIZE:
-            raise MapError('Map height should be an integer number lesser or equal to ')
+            raise MapError('Map height should be an integer number lesser or'
+                           'equal to {}'.format(MAX_Y_SIZE))
 
         else:
             return True
@@ -62,7 +68,9 @@ class Map:
 
 
     def _return_block_type(self, x, y):
+
         if all((x%2==1, y%2==1)):
             return BLOCK_REPR[BLOCK_WALL]
+
         else:
             return BLOCK_REPR[BLOCK_OPEN]
